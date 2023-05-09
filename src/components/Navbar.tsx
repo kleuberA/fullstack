@@ -1,14 +1,11 @@
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { getServerSession } from "next-auth";
-import AvatarContainer from "./Avatar";
 import DropdownMenuCotainer from "./DropdownComponent";
 
 async function Navbar() {
 
     const session = await getServerSession(authOptions);
-    // console.log(session)
     const nameUser = session?.user?.name;
-    // console.log(nameUser)
 
     return (
         <div className="h-14 w-full bg-zinc-900 border-b border-b-green-400">

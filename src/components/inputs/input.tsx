@@ -1,6 +1,6 @@
 'use client';
 
-import { FormInput } from "@/app/login/components/FormAuth";
+// import { FormInput } from "@/app/login/components/FormAuth";
 import clsx from "clsx";
 import {
     FieldErrors,
@@ -13,7 +13,7 @@ interface InputProps {
     id: string | any;
     type?: string;
     required?: boolean;
-    register: UseFormRegister<FormInput>,
+    register: UseFormRegister<FieldValues>,
     errors: FieldErrors | Array<FieldErrors> | any;
     disabled?: boolean;
 }
