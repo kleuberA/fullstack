@@ -11,7 +11,7 @@ const DropdownMenuCotainer = () => {
         <DropdownMenu.Root>
             <DropdownMenu.Trigger asChild>
                 <button
-                    className="rounded-full w-[35px] h-[35px] inline-flex items-center justify-center text-green-400 bg-white outline-none "
+                    className="rounded-full w-[35px] h-[35px] inline-flex items-center justify-center text-green-400 bg-zinc-900 outline-none "
                     aria-label="Customise options"
                 >
                     <AvatarContainer />
@@ -20,13 +20,13 @@ const DropdownMenuCotainer = () => {
 
             <DropdownMenu.Portal>
                 <DropdownMenu.Content
-                    className="min-w-[220px] bg-white rounded-md p-[10px]"
+                    className="min-w-[220px] bg-zinc-600/30 rounded-md p-[10px]"
                     sideOffset={5}
                 >
                     <DropdownMenu.Item className="group text-[13px] leading-none text-violet11 rounded-[3px] flex items-center h-[25px] relative select-none outline-none">
                         <LogoutButton />
                     </DropdownMenu.Item>
-                    <DropdownMenu.Arrow className="fill-white" />
+                    <DropdownMenu.Arrow className="fill-zinc-600/30" />
                 </DropdownMenu.Content>
             </DropdownMenu.Portal>
         </DropdownMenu.Root>

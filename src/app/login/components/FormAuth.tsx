@@ -95,7 +95,7 @@ const AuthForm = () => {
                 transition={{ delay: 1 }}
             >
                 <div
-                    className="bg-white px-4 py-8 shadow sm:rounded-lg sm:px-10"
+                    className="bg-zinc-900/30 text-zinc-500 px-4 py-8 shadow sm:rounded-lg sm:px-10"
                 >
                     <form
                         className="space-y-6"
@@ -155,13 +155,13 @@ const AuthForm = () => {
                         className="flex gap-2 justify-center text-sm mt-6 px-2 text-gray-500"
                     >
                         <div>
-                            {variant === 'LOGIN' ? 'New to Messenger?' : 'Already have an account?'}
+                            {variant === 'LOGIN' ? 'Não possui uma conta?' : 'Ja possui uma conta?'}
                         </div>
                         <div
                             onClick={toggleVariant}
                             className="underline cursor-pointer"
                         >
-                            {variant === 'LOGIN' ? 'Create an account' : 'Login'}
+                            {variant === 'LOGIN' ? 'Criar conta' : 'Login'}
                         </div>
                     </div>
                 </div>
