@@ -3,9 +3,10 @@ import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
 	try {
-		const { content, userId } = (await req.json()) as {
+		const { content, userId, filtro } = (await req.json()) as {
 			content: string;
 			userId: string;
+			filtro: string;
 		};
 
 		const user = await prisma.user.findUnique({ where: { id: userId } });
@@ -21,7 +22,7 @@ export async function POST(req: Request) {
 		}
 		const post = await prisma.post.create({
 			data: {
-				title: "Teste",
+				filtro,
 				content,
 				author: {
 					connect: { id: userId },
@@ -32,6 +33,7 @@ export async function POST(req: Request) {
 		return NextResponse.json({
 			post: {
 				id: post.id,
+				filtro: post.filtro,
 				message: post.content,
 				createdAt: post.createdAt,
 				author: {
